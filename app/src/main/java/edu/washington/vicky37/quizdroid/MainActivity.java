@@ -33,22 +33,26 @@ public class MainActivity extends AppCompatActivity {
                     public void onItemClick(AdapterView<?> parent, View view,
                     int position, long id) {
                         if(position==0){
-                            Intent myintent = new Intent(view.getContext(), Main2Activity.class);
+                            Intent myintent = new Intent(view.getContext(), OverviewContainerActivity.class);
+                            myintent.putExtra("value", "math");
                             startActivityForResult(myintent, 0);
                         }
 
                         if(position==1){
-                            Intent myintent = new Intent(view.getContext(), Main3Activity.class);
+                            Intent myintent = new Intent(view.getContext(), OverviewContainerActivity.class);
+                            myintent.putExtra("value", "physics");
                             startActivityForResult(myintent, 1);
                         }
 
                         if(position==2){
-                            Intent myintent = new Intent(view.getContext(), Main4Activity.class);
+                            Intent myintent = new Intent(view.getContext(), OverviewContainerActivity.class);
+                            myintent.putExtra("value", "computer");
                             startActivityForResult(myintent, 2);
                         }
 
                         if(position==3){
-                            Intent myintent = new Intent(view.getContext(), Main5Activity.class);
+                            Intent myintent = new Intent(view.getContext(), OverviewContainerActivity.class);
+                            myintent.putExtra("value", "marvel");
                             startActivityForResult(myintent, 3);
                         }
                     }

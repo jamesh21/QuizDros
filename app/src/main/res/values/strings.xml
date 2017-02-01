@@ -20,4 +20,7 @@
     <string name="answerFeedback">You have 1 out of 1 correct</string>
     <string name="finish">Finish</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
