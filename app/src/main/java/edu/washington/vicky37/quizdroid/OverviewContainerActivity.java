@@ -1,12 +1,14 @@
 package edu.washington.vicky37.quizdroid;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class OverviewContainerActivity extends AppCompatActivity implements MathMainFragment.OnFragmentInteractionListener ,
                 PhysicsMainFragment.OnFragmentInteractionListener, ComputerMainFragment.OnFragmentInteractionListener,
-                MarvelMainFragment.OnFragmentInteractionListener, MathQuestionFragment.OnFragmentInteractionListener {
+                MarvelMainFragment.OnFragmentInteractionListener, MathQuestionFragment.OnFragmentInteractionListener,
+                AnswerFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +47,15 @@ public class OverviewContainerActivity extends AppCompatActivity implements Math
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.overview_container, new MathQuestionFragment())
                         .commit();
-
+                break;
+            case R.id.mathSummitButton:
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.overview_container, new AnswerFragment())
+                        .commit();
+                break;
+            case R.id.finishButton:
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
         }
     }
 }

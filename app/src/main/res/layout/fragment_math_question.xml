@@ -5,58 +5,59 @@
     tools:context="edu.washington.vicky37.quizdroid.MathQuestionFragment">
 
     <TextView
-        android:text="@string/mathQuestion"
+        android:id="@+id/mathQuestionTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/mathQuestionTextView"
-        android:textSize="23sp"/>
+        android:text="@string/mathQuestion"
+        android:textSize="23sp" />
 
-    <RadioGroup android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+    <RadioGroup
         android:id="@+id/mathQuestionLayout"
-        android:layout_marginTop="40dp">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
 
         <RadioButton
-            android:text="@string/love"
+            android:id="@+id/mathRadioButton1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:id="@+id/mathRadioButton1" />
+            android:text="@string/love" />
 
         <RadioButton
-            android:text="@string/like"
+            android:id="@+id/mathRadioButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:id="@+id/mathRadioButton2" />
+            android:text="@string/like" />
 
         <RadioButton
-            android:text="@string/alright"
+            android:id="@+id/mathRadioButton3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:id="@+id/mathRadioButton3" />
+            android:text="@string/alright" />
 
         <RadioButton
-            android:text="@string/hate"
+            android:id="@+id/mathRadioButton4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:id="@+id/mathRadioButton4" />
+            android:text="@string/hate" />
     </RadioGroup>
 
     <Button
-        android:text="@string/summit"
+        android:id="@+id/mathSummitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/mathQuestionLayout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:id="@+id/mathSummitButton"
-        android:visibility="invisible"
-        android:textAllCaps="false"/>
+        android:text="@string/summit"
+        android:textAllCaps="false"
+        android:visibility="invisible" />
 
 </RelativeLayout>

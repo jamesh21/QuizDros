@@ -71,9 +71,21 @@ public class MathQuestionFragment extends Fragment implements View.OnClickListen
 //                summitButton.setVisibility(v.VISIBLE);
 //            };
 //        });
+        Button submitButton = (Button)mView.findViewById(R.id.mathSummitButton);
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.onFragmentInteraction(R.id.mathSummitButton);
+            }
+        });
+
         return mView;
     }
 
+    public void showRadioButton (View v) {
+        Button button = (Button)mView.findViewById(R.id.mathSummitButton);
+        button.setVisibility(View.VISIBLE);
+    }
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(int button) {
         if (mListener != null) {
@@ -101,8 +113,10 @@ public class MathQuestionFragment extends Fragment implements View.OnClickListen
     @Override
     public void onClick(View v) {
         if (mListener != null) {
-           Button button = (Button)mView.findViewById(R.id.mathSummitButton);
-            button.setVisibility(View.VISIBLE);
+                Button button = (Button)mView.findViewById(R.id.mathSummitButton);
+                button.setVisibility(View.VISIBLE);
+
+
 
         }
     }
